@@ -5,5 +5,6 @@ RUN apt-get -y update &&\
     add-apt-repository "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" &&\
     apt-get -y update &&\
     echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections &&\
-    apt-get -y install oracle-java8-installer &&\
-    useradd -u 1000 admin
+    apt-get -y install oracle-java8-installer && \
+    useradd -u 1000 admin && \
+    chmod 777 -R /home
